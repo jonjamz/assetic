@@ -78,11 +78,11 @@ elseif($count === 0 || "$fileHash.js" != basename($localGlob[0])) {
   ));
 
   $content  = $js->dump();
-	$name		  = $fileHash.".js";
+	$name     = $fileHash.".js";
 
-	$in			  = dirname(__FILE__) . DIRECTORY_SEPARATOR . "cache" . DIRECTORY_SEPARATOR . $name;
-	$make		  = fopen($in, 'x') or die("Can't open file!");
-	$inject	  = $content;
+	$in       = dirname(__FILE__) . DIRECTORY_SEPARATOR . "cache" . DIRECTORY_SEPARATOR . $name;
+	$make     = fopen($in, 'x') or die("Can't open file!");
+	$inject   = $content;
 	fwrite($make, $inject);
 	fclose($make);
 

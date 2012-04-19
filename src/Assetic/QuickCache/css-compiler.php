@@ -89,11 +89,11 @@ elseif($count === 0 || "$fileHash.css" != basename($localGlob[0])) {
   ));
 
   $content  = $css->dump();
-	$name		  = $fileHash.".css";
+	$name     = $fileHash.".css";
 
-	$in			  = dirname(__FILE__) . DIRECTORY_SEPARATOR . "cache" . DIRECTORY_SEPARATOR . $name;
-	$make		  = fopen($in, 'x') or die("Can't open file!");
-	$inject	  = $content;
+	$in       = dirname(__FILE__) . DIRECTORY_SEPARATOR . "cache" . DIRECTORY_SEPARATOR . $name;
+	$make     = fopen($in, 'x') or die("Can't open file!");
+	$inject   = $content;
 	fwrite($make, $inject);
 	fclose($make);
 
